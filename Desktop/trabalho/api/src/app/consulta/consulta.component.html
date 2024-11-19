@@ -1,0 +1,22 @@
+<h1> Consulta Parlamentar</h1>
+
+
+<form [formGroup]="formBusca">
+    <label for="nome" class="form-label">Nome</label>
+    <input class="form-control "  type="text" name="nome" id="nome" placeholder="Digite o nome do deputado" formControlName="nome">
+    <input class="btn btn-light mt-3" type="button" value="Buscar" [disabled]="formBusca.invalid" (click)="buscar()">
+</form>
+
+<div *ngIf="deputados != undefined" 
+     class="card" 
+    >
+     <img [src]="deputados.Poster" class="card-img-top" alt="Poster">
+       <div class="card-body">
+              <h5 class="card-title">{{deputados?.nome}}</h5>
+              <ul class="card-text">
+                 <li> {{deputados.Director}}</li>
+                 <li>{{deputados.Year}}</li>
+                 <li> {{deputados.Genre}}</li>
+              </ul>
+       </div>
+</div>
