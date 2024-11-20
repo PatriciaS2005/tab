@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+qimport { HttpClient } from '@angular/common/http';
 import { deputados } from './deputados';
 import { Injectable } from '@angular/core';
 
@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DeputadosService {
-  private API = 'deputados?nome=Patr%C3%ADcia&ordem=ASC&ordenarPor=nome'
-  private Deputados: deputados[] = []
+  private API = 'https://dadosabertos.camara.leg.br/api/v2/deputados?nome='
+  private deputados: deputados[] = []
 
   constructor(private http: HttpClient) {
     this.http.get(`${this.API} &t=Titulo`).subscribe(

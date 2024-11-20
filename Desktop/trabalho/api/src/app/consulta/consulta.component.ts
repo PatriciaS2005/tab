@@ -19,13 +19,14 @@ export class ConsultaComponent {
     })
     this.deputados = undefined
   }
+
   buscar(){
-    const nome = this.formBusca.value.nome
-    this.ds.buscarDeputadoPorNome(nome).subscribe( res => deputados | undefined) => {
-        res => {
-          this.depultados = res
-      }
-    )
+   const deputados = this.formBusca.value.deputados
+     this.ds.buscarDeputadoPorNome(deputados).subscribe(
+       res => {
+           this.deputados = res
+  }
+  )
+   }
   }
 
-}
