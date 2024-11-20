@@ -1,6 +1,6 @@
-export class deputados{
+export class Deputados{
 
-    Nome:string = '';
+    nome:string = '';
     
     
 }
