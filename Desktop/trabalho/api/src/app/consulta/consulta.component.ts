@@ -21,9 +21,9 @@ export class ConsultaComponent {
   }
   buscar(){
     const nome = this.formBusca.value.nome
-    this.ds.buscarDeputadoPorNome(nome).subscribe(
-      (      res: deputados | undefined) => {
-        this.deputados = res
+    this.ds.buscarDeputadoPorNome(nome).subscribe( res => deputados | undefined) => {
+        res => {
+          this.depultados = res
       }
     )
   }
