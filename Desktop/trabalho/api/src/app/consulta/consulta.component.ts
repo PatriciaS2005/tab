@@ -1,7 +1,7 @@
 import { DeputadosService } from './../model/deputados.service';
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { deputados } from '../model/deputados';
+import { Deputados } from '../model/deputados';
 
 @Component({
   selector: 'app-consulta',
@@ -11,7 +11,7 @@ import { deputados } from '../model/deputados';
 export class ConsultaComponent {
 
   formBusca: FormGroup
-  deputados: deputados | undefined
+  deputados: Deputados | undefined
 
   constructor(private fb: FormBuilder, private ds: DeputadosService){
     this.formBusca = this.fb.group({
